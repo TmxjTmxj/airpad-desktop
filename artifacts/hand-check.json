@@ -1,0 +1,197 @@
+{
+  "hand_check": "guided measurement on a real hand",
+  "source": "camera",
+  "note": "Every number here came from this run. Nothing was produced by a model or a fixture.",
+  "camera": {
+    "source_size": [
+      1280,
+      720
+    ],
+    "backend": "auto",
+    "device": 0
+  },
+  "fps": {
+    "min": 29.27,
+    "median": 29.98,
+    "max": 47.62,
+    "samples": 381
+  },
+  "inference_ms": {
+    "min": 15.51,
+    "median": 16.27,
+    "max": 18.64,
+    "samples": 381
+  },
+  "frames": 381,
+  "frames_with_hand": 381,
+  "frames_valid_geometry": 184,
+  "poses": {
+    "open": 48,
+    "unknown": 19,
+    "pointer": 117
+  },
+  "states": {
+    "LOST_TRACKING": 212,
+    "CLUTCH": 53,
+    "TRACKING": 96,
+    "PINCH_APPROACH": 9,
+    "PINCH_START": 7,
+    "PINCH_HOLD": 4
+  },
+  "actions": {
+    "release_all": 200,
+    "move": 83
+  },
+  "rejection_reasons": {
+    "Make a pointing or open hand": 92,
+    "Geometry valid": 184,
+    "Keep the whole hand in view": 105
+  },
+  "phase_samples": {
+    "open": 23,
+    "fist": 74,
+    "point": 74,
+    "sweep": 12,
+    "pinch": 93
+  },
+  "enough_data": true,
+  "hint": "All five phases measured cleanly.",
+  "recommended": {
+    "finger_thresholds": [
+      0.4945,
+      0.4499,
+      0.45,
+      0.4793,
+      0.6346
+    ],
+    "finger_marginals": [
+      0.2188,
+      0.15,
+      0.15,
+      0.1953,
+      0.4352
+    ],
+    "finger_order": [
+      "thumb",
+      "index",
+      "middle",
+      "ring",
+      "pinky"
+    ],
+    "threshold_report": {
+      "phases": {
+        "open": 23,
+        "fist": 74,
+        "pointer": 74
+      },
+      "per_finger": {
+        "thumb": {
+          "extended_median": 1.0,
+          "curled_median": 0.08092581519664827,
+          "extended_samples": 23,
+          "curled_samples": 148,
+          "threshold": 0.4945,
+          "source": "measured",
+          "confidence": "good"
+        },
+        "index": {
+          "extended_median": 0.9996990544745231,
+          "curled_median": 0.0,
+          "extended_samples": 97,
+          "curled_samples": 74,
+          "threshold": 0.4499,
+          "source": "measured",
+          "confidence": "good"
+        },
+        "middle": {
+          "extended_median": 1.0,
+          "curled_median": 0.0,
+          "extended_samples": 23,
+          "curled_samples": 148,
+          "threshold": 0.45,
+          "source": "measured",
+          "confidence": "good"
+        },
+        "ring": {
+          "extended_median": 1.0,
+          "curled_median": 0.053340983864352445,
+          "extended_samples": 23,
+          "curled_samples": 148,
+          "threshold": 0.4793,
+          "source": "measured",
+          "confidence": "good"
+        },
+        "pinky": {
+          "extended_median": 1.0,
+          "curled_median": 0.33554896732861816,
+          "extended_samples": 23,
+          "curled_samples": 148,
+          "threshold": 0.6346,
+          "source": "measured",
+          "confidence": "good"
+        }
+      },
+      "defaults_used": [],
+      "measured_fingers": 5,
+      "narrow_fingers": [],
+      "thresholds": [
+        0.4945,
+        0.4499,
+        0.45,
+        0.4793,
+        0.6346
+      ],
+      "marginals": [
+        0.2188,
+        0.15,
+        0.15,
+        0.1953,
+        0.4352
+      ],
+      "note": "Thresholds are placed in the gap between this hand's extended and curled score distributions, even when that gap is narrow - a fixed threshold is precisely what fails a hand that scores low. The marginal band is anchored just above this hand's curled median. Fingers whose postures did not separate at all keep the built-in default and are listed in defaults_used."
+    },
+    "sensitivity": 2200.0,
+    "sweep_report": {
+      "samples": 12,
+      "span_palm_units": 0.1665,
+      "target_counts": 1100.0,
+      "sensitivity": 2200,
+      "counts_per_comfortable_sweep": 366
+    },
+    "pinch": {
+      "pinch_close": 0.6,
+      "pinch_release": 1.0856,
+      "pinch_open": 1.3191,
+      "pinch_contact": 0.4925,
+      "closed_p15": 0.3851,
+      "open_p85": 1.3191,
+      "samples": 93
+    }
+  },
+  "applied": true,
+  "screenshot": "artifacts/hand-check.png",
+  "applied_to": "D:/codex/\u53cd\u4ee3/runtime-data/profile.json",
+  "applied_values": {
+    "finger_thresholds": [
+      0.4945,
+      0.4499,
+      0.45,
+      0.4793,
+      0.6346
+    ],
+    "finger_marginals": [
+      0.2188,
+      0.15,
+      0.15,
+      0.1953,
+      0.4352
+    ],
+    "calibrated": true,
+    "sensitivity": 2200.0,
+    "pinch_close": 0.6,
+    "pinch_release": 1.0856,
+    "pinch_open": 1.3191,
+    "pinch_contact": 0.4925
+  },
+  "next_step": "Start AIRPAD (or restart it if it was already open before this measurement) to use these values."
+}

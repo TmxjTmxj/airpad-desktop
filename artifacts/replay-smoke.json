@@ -1,0 +1,167 @@
+{
+  "smoke": "replay-smoke",
+  "source": "synthetic-scripted fixture, no camera, no person",
+  "fixture": "tests/fixtures/landmarks/pointer.jsonl",
+  "profile": "shipping defaults (two-finger scroll is opt-in and stays off here)",
+  "elapsed_s": 5.59,
+  "frames_delivered": 131,
+  "practice_only": true,
+  "desktop_broker_created": false,
+  "frames_saved": 0,
+  "logged_states": [
+    "CLUTCH",
+    "DRAGGING",
+    "LOST_TRACKING",
+    "PINCH_HOLD",
+    "PINCH_START",
+    "TRACKING"
+  ],
+  "logged_inputs": [
+    "click",
+    "left_down",
+    "left_up"
+  ],
+  "screenshots": [
+    {
+      "name": "click",
+      "at_s": 1.782,
+      "path": "artifacts/replay-smoke-click.png",
+      "bytes": 145993,
+      "skeleton_px": 285,
+      "joint_px": 7476,
+      "practice_x": 0.98,
+      "practice_y": 0.5,
+      "click_count": 1,
+      "dragging": false,
+      "state": "CLUTCH"
+    },
+    {
+      "name": "drag",
+      "at_s": 2.735,
+      "path": "artifacts/replay-smoke-drag.png",
+      "bytes": 147153,
+      "skeleton_px": 269,
+      "joint_px": 7692,
+      "practice_x": 0.98,
+      "practice_y": 0.5,
+      "click_count": 1,
+      "dragging": true,
+      "state": "DRAGGING"
+    },
+    {
+      "name": "two-finger",
+      "at_s": 3.969,
+      "path": "artifacts/replay-smoke-two-finger.png",
+      "bytes": 146241,
+      "skeleton_px": 264,
+      "joint_px": 7559,
+      "practice_x": 0.9355,
+      "practice_y": 0.62,
+      "click_count": 1,
+      "dragging": false,
+      "state": "TRACKING"
+    }
+  ],
+  "checks": [
+    {
+      "name": "every fixture frame delivered",
+      "passed": true,
+      "detail": 131
+    },
+    {
+      "name": "camera reported running",
+      "passed": true,
+      "detail": "running"
+    },
+    {
+      "name": "gesture states reached",
+      "passed": true,
+      "detail": [
+        "CLUTCH",
+        "DRAGGING",
+        "LOST_TRACKING",
+        "PINCH_HOLD",
+        "PINCH_START",
+        "TRACKING"
+      ]
+    },
+    {
+      "name": "click registered in practice",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "drag engaged and released",
+      "passed": true,
+      "detail": [
+        "click",
+        "left_down",
+        "left_up"
+      ]
+    },
+    {
+      "name": "drag screenshot caught the drag",
+      "passed": true,
+      "detail": [
+        [
+          "click",
+          "CLUTCH"
+        ],
+        [
+          "drag",
+          "DRAGGING"
+        ],
+        [
+          "two-finger",
+          "TRACKING"
+        ]
+      ]
+    },
+    {
+      "name": "practice pointer moved",
+      "passed": true,
+      "detail": 0.9355
+    },
+    {
+      "name": "no desktop broker created",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no error raised",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "screenshots captured",
+      "passed": true,
+      "detail": [
+        "click",
+        "drag",
+        "two-finger"
+      ]
+    },
+    {
+      "name": "screenshots show the drawn skeleton",
+      "passed": true,
+      "detail": [
+        [
+          "click",
+          285,
+          7476
+        ],
+        [
+          "drag",
+          269,
+          7692
+        ],
+        [
+          "two-finger",
+          264,
+          7559
+        ]
+      ]
+    }
+  ],
+  "status": "passed"
+}

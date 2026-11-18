@@ -1,0 +1,24 @@
+{
+  "source": "SCRIPTED observations, NOT human/camera usability measurements",
+  "seed": 927,
+  "fps": 30,
+  "camera_opened": false,
+  "os_input": false,
+  "fixture": "200 stationary pinches: isolated palm spikes or alternating tremor; default and wide pinch ranges. Pointer: 120 sine-noise frames, 0.004 image amplitude, 0.2 palm scale, sensitivity 2200.",
+  "current": {
+    "click_trials": 200,
+    "correct_stationary_clicks": 200,
+    "unintended_drags": 0,
+    "missing_clicks": 0,
+    "pointer_noise_rms_counts": 0.0,
+    "pointer_noise_peak_counts": 0
+  },
+  "baseline": {
+    "click_trials": 200,
+    "correct_stationary_clicks": 0,
+    "unintended_drags": 200,
+    "missing_clicks": 200,
+    "pointer_noise_rms_counts": 8.658,
+    "pointer_noise_peak_counts": 13
+  }
+}

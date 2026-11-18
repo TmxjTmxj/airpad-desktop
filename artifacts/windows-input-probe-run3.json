@@ -1,0 +1,142 @@
+{
+  "probe": "windows-input-probe",
+  "events": [
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "move",
+    "down",
+    "up",
+    "wheel",
+    "down",
+    "move",
+    "up",
+    "move",
+    "wheel",
+    "zoom",
+    "down",
+    "up",
+    "wheel",
+    "down",
+    "up",
+    "wheel",
+    "down",
+    "up",
+    "down",
+    "up",
+    "down",
+    "up",
+    "down",
+    "up",
+    "down",
+    "up",
+    "down",
+    "up"
+  ],
+  "event_counts": {
+    "down": 10,
+    "up": 10,
+    "move": 28,
+    "wheel": 4,
+    "zoom": 1
+  },
+  "stages": [
+    {
+      "name": "enable (real backend + global hotkey registration)",
+      "status": "passed"
+    },
+    {
+      "name": "click reaches the OS",
+      "status": "passed",
+      "click_to_up_ms": 4.51
+    },
+    {
+      "name": "drag down/move/up reaches the OS",
+      "status": "passed"
+    },
+    {
+      "name": "vertical wheel reaches the OS",
+      "status": "passed"
+    },
+    {
+      "name": "Ctrl+Wheel (zoom) reaches the OS",
+      "status": "passed"
+    },
+    {
+      "name": "repeat click cycle 1",
+      "status": "passed",
+      "owned_after_cycle": []
+    },
+    {
+      "name": "repeat click cycle 2",
+      "status": "passed",
+      "owned_after_cycle": []
+    },
+    {
+      "name": "repeat click cycle 3",
+      "status": "passed",
+      "owned_after_cycle": []
+    },
+    {
+      "name": "repeat click cycle 4",
+      "status": "passed",
+      "owned_after_cycle": []
+    },
+    {
+      "name": "repeat click cycle 5",
+      "status": "passed",
+      "owned_after_cycle": []
+    },
+    {
+      "name": "lease expiry releases the held button",
+      "status": "passed",
+      "lease_to_up_ms": 151.01
+    },
+    {
+      "name": "emergency stop releases the held button",
+      "status": "passed",
+      "broker_enabled_after": false,
+      "emergency_to_up_ms": 4.43
+    },
+    {
+      "name": "worker death releases the held button",
+      "status": "passed",
+      "owned_after_crash": [],
+      "crash_to_up_ms": 7.07,
+      "broker_error": "Input broker exited unexpectedly; input is paused"
+    }
+  ],
+  "measurements": {
+    "click_to_up_ms": 4.51,
+    "lease_to_up_ms": 151.01,
+    "emergency_to_up_ms": 4.43,
+    "crash_to_up_ms": 7.07
+  },
+  "release_ceiling_ms": 250.0,
+  "crash_ceiling_ms": 1000.0,
+  "owned_after_close": [],
+  "broker_error": "Input broker exited unexpectedly; input is paused",
+  "status": "passed"
+}

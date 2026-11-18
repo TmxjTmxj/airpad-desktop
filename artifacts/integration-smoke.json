@@ -1,0 +1,68 @@
+{
+  "smoke": "integration-smoke",
+  "source": "real camera, real model, real UI",
+  "elapsed_s": 11.02,
+  "frames_processed": 249,
+  "active_snapshots": 88,
+  "fps_max": 32.26,
+  "fps_median": 29.98,
+  "inference_ms_p50": 8.59,
+  "inference_ms_max": 15.95,
+  "geometry_valid_snapshots": 0,
+  "hand_seen": false,
+  "hand_note": "NO HAND WAS IN VIEW: the camera, model and UI ran, but the gesture path was not exercised by this run",
+  "states": [
+    "LOST_TRACKING",
+    "PAUSED",
+    "READY"
+  ],
+  "hand_states": [
+    "No hand detected"
+  ],
+  "practice_only": true,
+  "desktop_broker_created": false,
+  "frames_saved": 0,
+  "screenshot": {
+    "path": "artifacts/integration-camera.png",
+    "bytes": 202055,
+    "captured_at_s": 7.08
+  },
+  "checks": [
+    {
+      "name": "camera opened and produced frames",
+      "passed": true,
+      "detail": 249
+    },
+    {
+      "name": "frame rate measured",
+      "passed": true,
+      "detail": 32.3
+    },
+    {
+      "name": "inference timed",
+      "passed": true,
+      "detail": 88
+    },
+    {
+      "name": "no desktop broker created",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no error raised",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "practice mode stayed on",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "screenshot captured",
+      "passed": true,
+      "detail": "artifacts/integration-camera.png"
+    }
+  ],
+  "status": "passed"
+}

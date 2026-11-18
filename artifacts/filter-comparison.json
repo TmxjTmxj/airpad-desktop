@@ -1,0 +1,55 @@
+{
+  "comparison": "filter-comparison",
+  "trajectory": {
+    "source": "scripted: 60 still frames (gaussian sigma 0.004 palm units) then 60 frames at 0.15 palm units/s",
+    "fps": 30.0,
+    "sensitivity": 1000.0,
+    "min_cutoff_hz": 1.5,
+    "ema_alpha": 0.35,
+    "kalman_process": 0.0001,
+    "kalman_measure": 0.01,
+    "seed": 11
+  },
+  "metric_notes": {
+    "still_jitter_rms_counts": "RMS emitted counts while still: lower is steadier",
+    "still_peak_counts": "largest single-frame count while still: worst visible twitch",
+    "ramp_median_counts": "median counts per frame during constant-velocity motion",
+    "ramp_lag_vs_raw_counts": "mean counts the variant trails raw by during the ramp",
+    "total_counts": "sum over the path: a filter must not lose or invent travel"
+  },
+  "variants": {
+    "raw": {
+      "still_jitter_rms_counts": 5.246,
+      "still_peak_counts": 13,
+      "ramp_median_counts": 5.0,
+      "total_counts": 304,
+      "frames": 120,
+      "ramp_lag_vs_raw_counts": 0.0
+    },
+    "ema": {
+      "still_jitter_rms_counts": 1.308,
+      "still_peak_counts": 5,
+      "ramp_median_counts": 5.0,
+      "total_counts": 295,
+      "frames": 120,
+      "ramp_lag_vs_raw_counts": 0.2
+    },
+    "one_euro": {
+      "still_jitter_rms_counts": 0.902,
+      "still_peak_counts": 4,
+      "ramp_median_counts": 5.0,
+      "total_counts": 291,
+      "frames": 120,
+      "ramp_lag_vs_raw_counts": 0.283
+    },
+    "kalman": {
+      "still_jitter_rms_counts": 1.207,
+      "still_peak_counts": 6,
+      "ramp_median_counts": 5.0,
+      "total_counts": 297,
+      "frames": 120,
+      "ramp_lag_vs_raw_counts": 0.183
+    }
+  },
+  "caveat": "Scripted path, fixed parameters. Evidence for the Stage 3 exit criterion only: it does not establish feel on a real hand, and the shipped default remains the speed-adaptive One Euro filter."
+}

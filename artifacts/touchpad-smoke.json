@@ -1,0 +1,37 @@
+{
+  "source": "synthetic landmarks; NOT human usability data",
+  "camera_opened": false,
+  "os_input": false,
+  "frames": 96,
+  "actions": {
+    "click": 1,
+    "left_down": 1,
+    "left_up": 1,
+    "move": 6,
+    "release_all": 1,
+    "right_click": 1,
+    "wheel": 10
+  },
+  "states": [
+    "LOST_TRACKING",
+    "TRACKING",
+    "PINCH_START",
+    "PINCH_HOLD",
+    "CLUTCH",
+    "DRAGGING",
+    "TWO_CANDIDATE",
+    "TWO_PENDING",
+    "SCROLLING"
+  ],
+  "checks": {
+    "one_left_click": true,
+    "one_drag": true,
+    "one_right_click": true,
+    "scroll_produced": true,
+    "no_broker_created": true,
+    "no_button_held": true,
+    "screenshot_saved": true
+  },
+  "ok": true,
+  "screenshot": "D:\\codex\\反代\\artifacts\\touchpad-practice.png"
+}

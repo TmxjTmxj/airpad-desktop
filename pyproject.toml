@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "airpad-desktop"
+version = "0.1.0"
+description = "Turn a webcam into a local spatial multi-touch trackpad."
+requires-python = ">=3.12,<3.13"
+dependencies = ["mediapipe==0.10.21", "numpy==1.26.4", "opencv-contrib-python==4.11.0.86", "PySide6==6.8.3"]
+
+[project.scripts]
+airpad = "airpad.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["airpad*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

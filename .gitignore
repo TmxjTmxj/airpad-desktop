@@ -1,0 +1,20 @@
+.venv/
+.cache/
+.dsh-vision-router/
+__pycache__/
+.pytest_cache/
+*.pyc
+# 本地诊断/测试临时目录
+.tmp-*
+runtime-data/
+models/*.task
+dist/
+build/
+*.egg-info/
+# Generated diagnostic images stay ignored, except the reviewed evidence that docs embed.
+artifacts/*.png
+!artifacts/ui-preview.png
+!artifacts/integration-camera.png
+!artifacts/replay-smoke-*.png
+artifacts/*.jsonl
+artifacts/*-private.*
